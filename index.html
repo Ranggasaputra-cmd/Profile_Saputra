@@ -140,17 +140,61 @@
 
         .hero-image {
             position: relative;
+            display: flex;
+            justify-content: center;
         }
 
-        .hero-image img {
+        .profile-container {
+            position: relative;
+            width: 350px;
+            height: 350px;
+        }
+
+        .profile-photo {
             width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            transition: transform 0.5s;
+            height: 100%;
+            border-radius: 20px;
+            object-fit: cover;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            border: 3px solid var(--accent);
+            transition: transform 0.5s, box-shadow 0.5s;
         }
 
-        .hero-image:hover img {
-            transform: translateY(-10px);
+        .profile-photo:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(100, 255, 218, 0.2);
+        }
+
+        .profile-badge {
+            position: absolute;
+            bottom: 20px;
+            right: -15px;
+            background-color: var(--accent);
+            color: var(--primary);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            z-index: 10;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .profile-frame {
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            right: -15px;
+            bottom: -15px;
+            border: 2px solid rgba(100, 255, 218, 0.3);
+            border-radius: 25px;
+            z-index: -1;
         }
 
         .btn {
@@ -381,6 +425,16 @@
             .hero-text h2 {
                 font-size: 1.8rem;
             }
+            
+            .profile-container {
+                width: 300px;
+                height: 300px;
+                margin: 0 auto;
+            }
+            
+            .profile-badge {
+                right: 10px;
+            }
         }
 
         @media (max-width: 768px) {
@@ -416,6 +470,11 @@
             .section-title h2 {
                 font-size: 2rem;
             }
+            
+            .profile-container {
+                width: 280px;
+                height: 280px;
+            }
         }
 
         @media (max-width: 576px) {
@@ -432,6 +491,18 @@
                 width: 100%;
                 margin-bottom: 15px;
                 text-align: center;
+            }
+            
+            .profile-container {
+                width: 250px;
+                height: 250px;
+            }
+            
+            .profile-badge {
+                padding: 8px 15px;
+                font-size: 0.8rem;
+                bottom: 15px;
+                right: 5px;
             }
         }
 
@@ -495,7 +566,14 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Network Engineer">
+                    <div class="profile-container">
+                        <!-- Foto Tanda Pengenal Muhamad Rangga Saputra -->
+                        <img src="https://increased-olive-ydtcbrx7hx.edgeone.app/WhatsApp%20Image%202026-01-09%20at%2010.12.00%20PM.jpeg" alt="Foto Profil Muhamad Rangga Saputra" class="profile-photo">
+                        <div class="profile-badge">
+                            <i class="fas fa-id-badge"></i> Junior Network Engineer
+                        </div>
+                        <div class="profile-frame"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -575,7 +653,7 @@
                 <!-- Project 5 -->
                 <div class="project-card">
                     <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1629654291660-3c98113a0437?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="MikroTik Configuration">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV2KUISCZctKcufLtY1-9iz9Mx0b9WMQnycQ&s" alt="MikroTik Configuration">
                     </div>
                     <div class="project-info">
                         <h3>Konfigurasi MikroTik Router</h3>
@@ -642,7 +720,7 @@
                         <div class="contact-details">
                             <h3>Instagram</h3>
                             <a href="https://www.instagram.com/callmerngg?igsh=MWU0Mm9lNjI3dGNqcQ%3D%3D&utm_source=qr" target="_blank">@callmerngg</a>
-                            <p>Juga follow: <a href="https://www.instagram.com/callmerngg?igsh=MWU0Mm9lNjI3dGNqcQ%3D%3D&utm_source=qr" target="_blank">@calmerngg</a></p>
+                            <p>Juga follow: <a href="https://www.instagram.com/callmerngg?igsh=MWU0Mm9lNjI3dGNqcQ%3D%3D&utm_source=qr" target="_blank">@callmerngg</a></p>
                         </div>
                     </div>
                 </div>
